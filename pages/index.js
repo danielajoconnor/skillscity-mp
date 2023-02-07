@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <div className="w-full py-10 bg-red-100">Hello
 
-    <button className="bg-blue-500 rounded px-4 py-1" onClick={handleClick}> Books Page</button>
+    <button className="bg-red-500 rounded px-4 py-1" onClick={handleClick}> Books Page</button>
     
     {/* <Link href="/books">
       Go to Books Page
