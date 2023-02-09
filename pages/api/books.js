@@ -1,21 +1,9 @@
-export default function handler(req, res) {
-    const books = [
-        {
-            id:"1",
-            title: "The Hobbit",
-            author: "J.R.R. Tolkien",
-        },
-        {
-            id:"2",
-            title: "The Fellowship of the Ring",
-            author: "J.R.R. Tolkien",
-        },
-        {
-            id:"3",
-            title: "Born a Crime",
-            author: "Trevor Noah",
-        }
-    ];
+import sql from "@/utils/postgres";
 
-    res.json(books);
+export default async function handler(req, res) {
+  const books = await sql`
+        select * from books
+    `;
+
+  res.json(books);
 }
