@@ -13,7 +13,7 @@ export default function SingleBook() {
     getBook(bookId);
   }, [bookId]);
 
-  const getBooks = async (id) => {
+  const getBook = async (id) => {
     const response = await fetch(`/api/book-by-id?id=${id}`);
     const data = await response.json();
     const { book } = data;
